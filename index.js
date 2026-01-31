@@ -34,21 +34,21 @@ const swiper = new Swiper(".products-swiper", {
     prevEl: ".arrow-svg-sliser.left",
   },
   breakpoints: {
-    319: {
+    300: {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 50,
     },
-    500: {
+    600: {
       slidesPerView: 2,
       spaceBetween: 10,
     },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    1200: {
+    920: {
       slidesPerView: 3,
       spaceBetween: 20,
+    },
+    1230: {
+      slidesPerView: 4,
+      spaceBetween: 40,
     },
   },
 });
@@ -68,7 +68,7 @@ categoryButton.forEach((button) => {
 });
 
 async function fetchDataFurniture(category) {
-  const url = `https://api.pexels.com/v1/search?query=${category}&per_page=12`;
+  const url = `https://api.pexels.com/v1/search?query=${category}&per_page=50`;
   const response = await fetch(url, {
     headers: {
       Authorization: "HXvKfPYK3xsNI7PRMm7TPvg0KVuhcWemuQ0nTsw1cFdjn4PcFaJ29QQg",
